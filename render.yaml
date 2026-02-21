@@ -1,16 +1,7 @@
 services:
   - type: web
-    name: unnati-intello-dashboard
+    name: service-intello
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
-    envVars:
-      - key: PERSONAL_XLSX
-        value: data/Link Triggered.xlsx
-      - key: MEAL_XLSX
-        value: data/Link Triggered MEAL.xlsx
-      - key: BODYSHOP_XLSX
-        value: data/Link Triggered BP.xlsx
-      - key: COMMERCIAL_XLSX
-        value: data/Link Triggered Commercial.xlsx
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
