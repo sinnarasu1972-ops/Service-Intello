@@ -28,10 +28,12 @@ AUTO_OPEN_BROWSER = os.environ.get("AUTO_OPEN_BROWSER", "0").strip() in {"1", "t
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.environ.get("DATA_DIR", os.path.join(BASE_DIR, "data"))
 
-PERSONAL_XLSX = os.environ.get("PERSONAL_XLSX", os.path.join(DATA_DIR, "Link Triggered.xlsx"))
-MEAL_XLSX = os.environ.get("MEAL_XLSX", os.path.join(DATA_DIR, "Link Triggered MEAL.xlsx"))
-BODYSHOP_XLSX = os.environ.get("BODYSHOP_XLSX", os.path.join(DATA_DIR, "Link Triggered BP.xlsx"))
-COMMERCIAL_XLSX = os.environ.get("COMMERCIAL_XLSX", os.path.join(DATA_DIR, "Link Triggered Commercial.xlsx"))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+PERSONAL_XLSX = os.path.join(BASE_DIR, "Link Triggered.xlsx")
+MEAL_XLSX = os.path.join(BASE_DIR, "Link Triggered MEAL.xlsx")
+BODYSHOP_XLSX = os.path.join(BASE_DIR, "Link Triggered BP.xlsx")
+COMMERCIAL_XLSX = os.path.join(BASE_DIR, "Link Triggered Commercial.xlsx")
 
 # FY Month order (Apr -> Mar)
 MONTH_ORDER = ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"]
